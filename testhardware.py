@@ -1,7 +1,7 @@
 import unittest
 import cpustatus
 #import diskstatus
-#import memorystatus
+import memorystatus
 
 max_cpu = 30.0
 network_name = "enp2s0"
@@ -18,7 +18,7 @@ class TestHardware(unittest.TestCase):
     def test_disks(self):
         pass
     def test_memory(self):
-        pass
+        self.assertEqual(memorystatus.virtual_memory_percentage(max_memory),"ok")
 
 if __name__ == '__main__':
     unittest.main()
