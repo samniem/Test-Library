@@ -1,6 +1,8 @@
 import psutil
 
-partitions = psutil.disk_partitions()
-usage = psutil.disk_usage('/')
-print(partitions)
-print("root partition / disk usage: {}".format(usage))
+def partition_usage(mount,max_disk_use):
+    usage = psutil.disk_usage(mount)
+    if usage[3] > max_disk_use:
+        return False
+    else:
+        return True
