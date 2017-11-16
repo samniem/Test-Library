@@ -5,6 +5,7 @@ Currently working in BASH and Python.
 Likely to add other options later as well.
 
 # Test Hardware
+Located in hardware/ folder
 
 Used to hardware status for following parameters:
 * cpu momentary utilization
